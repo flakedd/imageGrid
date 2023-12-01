@@ -1,13 +1,13 @@
 {
     "dataRoles": [
         {
-            "displayName": "Category Data",
-            "name": "category",
+            "displayName": "Estilo",
+            "name": "item_parent",
             "kind": "Grouping"
         },
         {
-            "displayName": "Measure Data",
-            "name": "measure",
+            "displayName": "Imagen",
+            "name": "url_image",
             "kind": "Measure"
         }
     ],
@@ -57,7 +57,7 @@
             "categorical": {
                 "categories": {
                     "for": {
-                        "in": "category"
+                        "in": "item_parent"
                     },
                     "dataReductionAlgorithm": {
                         "top": {}
@@ -67,7 +67,7 @@
                     "select": [
                         {
                             "bind": {
-                                "to": "measure"
+                                "to": "url_image"
                             }
                         }
                     ]
