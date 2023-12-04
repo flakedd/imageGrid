@@ -9,6 +9,11 @@
             "displayName": "Imagen",
             "name": "url_image",
             "kind": "Measure"
+        },
+        {
+            "displayName": "Margen",
+            "name": "mg",
+            "kind": "Measure"
         }
     ],
     "objects": {
@@ -69,11 +74,26 @@
                             "bind": {
                                 "to": "url_image"
                             }
+                        },
+                        {
+                            "bind": {
+                                "to": "mg"
+                            }
                         }
                     ]
                 }
             }
         }
     ],
-    "privileges": []
+    "privileges": [
+        {
+            "name": "WebAccess",
+            "essential": true,
+            "parameters": [ "https://www.cuidadoconelperro.com.mx/" ]
+        },
+        {
+            "name": "ExportContent",
+            "essential": false
+        }
+    ]
 }
