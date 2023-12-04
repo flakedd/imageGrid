@@ -17,7 +17,7 @@ class ReactCircleCard extends React.Component<{}, State> {
 
         return (
             <div>
-                <p>Aqui deberia ir una imagen </p>
+                <p>Aqui van a ir varias columnas </p>
                 <img src="https://app.cuidadoconelperro.com.mx/media/catalog/product/1/_/1_42319.jpg"/>
             </div>
         );
