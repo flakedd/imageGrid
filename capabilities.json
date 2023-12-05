@@ -11,8 +11,54 @@
             "kind": "Measure"
         },
         {
+            "displayName": "Ventas Pz",
+            "name": "sales_p",
+            "kind": "Measure",
+            "requiredTypes": [
+                {
+                    "integer": true
+                },
+                {
+                    "numeric": true
+                }
+            ]
+        },
+        {
+            "displayName": "Ventas $",
+            "name": "sales_m",
+            "kind": "Measure",
+            "requiredTypes": [
+                {
+                    "integer": true
+                },
+                {
+                    "numeric": true
+                }
+            ],
+            "preferredTypes": [
+                {
+                    "integer": true
+                }
+            ]
+        },
+        {
+            "displayName": "Inv Pz",
+            "name": "inventory_p",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Inv $",
+            "name": "inventory_m",
+            "kind": "Measure"
+        },
+        {
             "displayName": "Margen",
             "name": "mg",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Cobertura",
+            "name": "coverage",
             "kind": "Measure"
         }
     ],
@@ -77,7 +123,32 @@
                         },
                         {
                             "bind": {
+                                "to": "sales_p"
+                            }
+                        },
+                        {
+                            "bind": {
+                                "to": "sales_m"
+                            }
+                        },
+                        {
+                            "bind": {
+                                "to": "inventory_p"
+                            }
+                        },
+                        {
+                            "bind": {
+                                "to": "inventory_m"
+                            }
+                        },
+                        {
+                            "bind": {
                                 "to": "mg"
+                            }
+                        },
+                        {
+                            "bind": {
+                                "to": "coverage"
                             }
                         }
                     ]

@@ -2,14 +2,20 @@ import * as React from "react";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-const HalfCircle = ({ percentage, color }) => {
+interface HalfCircleProps {
+    percentage: number; // Ajusta el tipo según tus necesidades
+    color: string;
+    title: string;
+  }
+
+const HalfCircle = ({ percentage, color, title }) => {
   const strokeWidth = 10; // Ancho del trazo
 
   return (
-    <div style={{ width: "50px", height: "25px" }}>
+    <div style={{ width: "60px", height: "30px" }}>
       <CircularProgressbar
         value={percentage}
-        text={`${percentage}%`}
+        text={`${title} ${percentage}%`} 
         strokeWidth={strokeWidth}
         styles={{
           path: { stroke: color },
