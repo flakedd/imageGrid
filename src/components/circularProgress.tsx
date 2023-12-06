@@ -12,7 +12,7 @@ const HalfCircle = ({ percentage, color, title }) => {
   const strokeWidth = 10; // Ancho del trazo
 
   return (
-    <div style={{ width: "60px", height: "30px" , padding: "20px" }}>
+    <div>
       <CircularProgressbar
         value={percentage}
         text={`${title} ${percentage}%`} 

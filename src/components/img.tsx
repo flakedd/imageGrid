@@ -2,18 +2,16 @@ import * as React from "react";
 import '../../css/index.css';
 
 interface imgProps {
-    colIndex: number;
-  children: React.ReactNode;
-  estilo:string;
+    image: string;
 }
 
-const img: React.FC<imgProps> = ({ colIndex, children,estilo }) => {
+const ImageStyle: React.FC<imgProps> = ({ image }) => {
   return (
-    <div key={colIndex} className="Card">
-      <div className="title">{`${estilo}`}</div>
-      {children}
+    <div className="contentImage">
+        <img src={image} className="img"/>
     </div>
+    
   );
 };
 
-export default img;
+export default ImageStyle;

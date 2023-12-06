@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import '../../css/index.css';
 interface BoardBodyProps {
   rowIndex: number;
   children: React.ReactNode;
@@ -7,7 +7,7 @@ interface BoardBodyProps {
 
 const BoardBody: React.FC<BoardBodyProps> = ({ rowIndex, children }) => {
   return (
-    <div key={rowIndex} style={{ display: "flex", flexDirection: "row" }}>
+    <div key={rowIndex} className="body">
       {children}
     </div>
   );

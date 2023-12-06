@@ -6,7 +6,7 @@ import BoardBody from "./components/boardBody";
 import BoardCard from "./components/BoardCard";
 import InfoSegment from "./components/InfoSegment";
 import Graphics from "./components/Graphics";
-
+import ImageStyle from "./components/img";
 interface Props {
     dataView: DataView;
 }
@@ -52,20 +52,18 @@ class boardSales extends React.Component<Props, State> {
                     var invM = Number(values[4]?.values[rowIndex * numColumns + colIndex]).toFixed(0);
                     var marginValue = Number(values[5]?.values[rowIndex * numColumns + colIndex]);
                     var coverageValue = Number(values[6]?.values[rowIndex * numColumns + colIndex]);
+                    var scrolling = Number(values[7]?.values[rowIndex * numColumns + colIndex]);
 
                     return (
                         <BoardCard colIndex={colIndex} estilo={estilo}>
                             
-                            <img
-                                src={image}
-                                style={{ width: "130px", height: "150px" }}
-                             />
+                            <ImageStyle image={image}></ImageStyle>
                             
                             <InfoSegment title={"Ventas"} pieces={salesP} cash={salesM}></InfoSegment>
 
                             <InfoSegment title={"Inventario"} pieces={invP} cash={invM}></InfoSegment>
 
-                            <Graphics marginValue={marginValue} coverageValue={coverageValue}></Graphics>
+                            <Graphics marginValue={marginValue} coverageValue={coverageValue } scrolling={scrolling}></Graphics>
                             </BoardCard>
                     );
                 })}

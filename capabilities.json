@@ -60,6 +60,11 @@
             "displayName": "Cobertura",
             "name": "coverage",
             "kind": "Measure"
+        },
+        {
+            "displayName": "Desplazamiento",
+            "name": "scrolling",
+            "kind": "Measure"
         }
     ],
     "objects": {
@@ -149,6 +154,11 @@
                         {
                             "bind": {
                                 "to": "coverage"
+                            }
+                        },
+                        {
+                            "bind": {
+                                "to": "scrolling"
                             }
                         }
                     ]
