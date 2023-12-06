@@ -1,0 +1,74 @@
+.title{
+    margin: 0!important;
+    font-weight: bold;
+    text-align: center;
+}
+.BoardCard {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.Card {
+    margin: 10px;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+}
+.InfoSegment {
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+.InfoSegment p{
+    margin: 0!important;
+}
+.subtitle {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+}
+.pieces {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.cash {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.graphics {
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.graph1 {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.graph2 {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+

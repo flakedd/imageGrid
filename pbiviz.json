@@ -20,7 +20,7 @@
         "icon": "assets/icon.png"
     },
     "externalJS": [],
-    "style": "style/visual.less",
+    "style": "css/index.css",
     "capabilities": "capabilities.json",
     "dependencies": null,
     "stringResources": [],

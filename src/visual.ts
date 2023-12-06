@@ -4,7 +4,7 @@ import VisualUpdateOptions = powerbi.extensibility.visual.VisualUpdateOptions;
 import IVisual = powerbi.extensibility.visual.IVisual;
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import ReactCircleCard from "./reactCircleCard";
+import boardSales from "./boardSales";
 import "./../style/visual.less";
 
 export class Visual implements IVisual {
@@ -12,7 +12,7 @@ export class Visual implements IVisual {
     private reactRoot: React.ReactElement;  // Cambié el tipo aquí
 
     constructor(options: VisualConstructorOptions) {
-        this.reactRoot = React.createElement(ReactCircleCard, { dataView: null });  // Proporciona un valor por defecto o null
+        this.reactRoot = React.createElement(boardSales, { dataView: null });  // Proporciona un valor por defecto o null
         this.target = options.element;
 
         ReactDOM.render(this.reactRoot, this.target);
@@ -25,7 +25,7 @@ export class Visual implements IVisual {
             return;
         }
 
-        this.reactRoot = React.createElement(ReactCircleCard, { dataView });
+        this.reactRoot = React.createElement(boardSales, { dataView });
         ReactDOM.render(this.reactRoot, this.target);
     }
 }
