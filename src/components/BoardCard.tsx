@@ -2,9 +2,9 @@ import * as React from "react";
 import '../../css/index.css';
 
 interface BoardCardProps {
-    colIndex: number;
+  colIndex: number;
   children: React.ReactNode;
-  estilo:string;
+  estilo: string;
 }
 
 const BoardCard: React.FC<BoardCardProps> = ({ colIndex, children,estilo }) => {

@@ -8,8 +8,7 @@
         "description": "es una prueba",
         "supportUrl": "test.com",
         "gitHubUrl": "",
-        "Content-Security-Policy": "img-src 'unsafe-inline' 'unsafe-eval' https: data:"
-
+        "Content-Security-Policy": "default-src https://app.powerbi.com data: blob: 'unsafe-inline' 'unsafe-eval'; img-src https://app.cuidadoconelperro.com.mx/ https://www.cuidadoconelperro.com.mx/"
     },
     "apiVersion": "5.3.0",
     "author": {

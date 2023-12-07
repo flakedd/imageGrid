@@ -9,10 +9,10 @@ import "./../style/visual.less";
 
 export class Visual implements IVisual {
     private target: HTMLElement;
-    private reactRoot: React.ReactElement;  // Cambié el tipo aquí
+    private reactRoot: React.ReactElement;  
 
     constructor(options: VisualConstructorOptions) {
-        this.reactRoot = React.createElement(boardSales, { dataView: null });  // Proporciona un valor por defecto o null
+        this.reactRoot = React.createElement(boardSales, { dataView: null }); 
         this.target = options.element;
 
         ReactDOM.render(this.reactRoot, this.target);
