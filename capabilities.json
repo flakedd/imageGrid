@@ -1,180 +1,197 @@
 {
     "dataRoles": [
-        {
-            "displayName": "Estilo",
-            "name": "item_parent",
-            "kind": "Grouping"
-        },
-        {
-            "displayName": "Imagen",
-            "name": "url_image",
-            "kind": "Measure"
-        },
-        {
-            "displayName": "Ventas Pz",
-            "name": "sales_p",
-            "kind": "Measure",
-            "requiredTypes": [
-                {
-                    "integer": true
-                },
-                {
-                    "numeric": true
-                }
-            ]
-        },
-        {
-            "displayName": "Ventas $",
-            "name": "sales_m",
-            "kind": "Measure",
-            "requiredTypes": [
-                {
-                    "integer": true
-                },
-                {
-                    "numeric": true
-                }
-            ],
-            "preferredTypes": [
-                {
-                    "integer": true
-                }
-            ]
-        },
-        {
-            "displayName": "Inv Pz",
-            "name": "inventory_p",
-            "kind": "Measure"
-        },
-        {
-            "displayName": "Inv $",
-            "name": "inventory_m",
-            "kind": "Measure"
-        },
-        {
-            "displayName": "Margen",
-            "name": "mg",
-            "kind": "Measure"
-        },
-        {
-            "displayName": "Cobertura",
-            "name": "coverage",
-            "kind": "Measure"
-        },
-        {
-            "displayName": "Desplazamiento",
-            "name": "scrolling",
-            "kind": "Measure"
-        }
+      {
+        "displayName": "Estilo",
+        "name": "item_parent",
+        "kind": "Grouping"
+      },
+      {
+        "displayName": "Imagen",
+        "name": "url_image",
+        "kind": "Measure"
+      },
+      {
+        "displayName": "Ventas Pz",
+        "name": "sales_p",
+        "kind": "Measure",
+        "requiredTypes": [
+          {
+            "integer": true
+          },
+          {
+            "numeric": true
+          }
+        ]
+      },
+      {
+        "displayName": "Ventas $",
+        "name": "sales_m",
+        "kind": "Measure",
+        "requiredTypes": [
+          {
+            "integer": true
+          },
+          {
+            "numeric": true
+          }
+        ],
+        "preferredTypes": [
+          {
+            "integer": true
+          }
+        ]
+      },
+      {
+        "displayName": "Inv Pz",
+        "name": "inventory_p",
+        "kind": "Measure"
+      },
+      {
+        "displayName": "Inv $",
+        "name": "inventory_m",
+        "kind": "Measure"
+      },
+      {
+        "displayName": "Margen",
+        "name": "mg",
+        "kind": "Measure"
+      },
+      {
+        "displayName": "Cobertura",
+        "name": "coverage",
+        "kind": "Measure"
+      },
+      {
+        "displayName": "Desplazamiento",
+        "name": "scrolling",
+        "kind": "Measure"
+      }
     ],
     "objects": {
-        "dataPoint": {
-            "properties": {
-                "defaultColor": {
-                    "type": {
-                        "fill": {
-                            "solid": {
-                                "color": true
-                            }
-                        }
-                    }
-                },
-                "showAllDataPoints": {
-                    "type": {
-                        "bool": true
-                    }
-                },
-                "fill": {
-                    "type": {
-                        "fill": {
-                            "solid": {
-                                "color": true
-                            }
-                        }
-                    }
-                },
-                "fillRule": {
-                    "type": {
-                        "fill": {}
-                    }
-                },
-                 "fontSize": {
-                    "type": {
-                        "formatting": {
-                            "fontSize": true
-                        }
-                    }
-                }
+      "general": {
+        "displayName": "General",
+        "displayNameKey": "General",
+        "properties": {
+          "filter": {
+            "type": {
+              "filter": true
             }
+          }
         }
+      },
+      "dataPoint": {
+        "properties": {
+          "defaultColor": {
+            "type": {
+              "fill": {
+                "solid": {
+                  "color": true
+                }
+              }
+            }
+          },
+          "showAllDataPoints": {
+            "type": {
+              "bool": true
+            }
+          },
+          "fill": {
+            "type": {
+              "fill": {
+                "solid": {
+                  "color": true
+                }
+              }
+            }
+          },
+          "fillRule": {
+            "type": {
+              "fill": {}
+            }
+          },
+          "fontSize": {
+            "type": {
+              "formatting": {
+                "fontSize": true
+              }
+            }
+          }
+        }
+      },
+      "Board": {
+        "displayName": "Board",
+        "properties": {
+        }
+      }
     },
     "dataViewMappings": [
-        {
-            "categorical": {
-                "categories": {
-                    "for": {
-                        "in": "item_parent"
-                    },
-                    "dataReductionAlgorithm": {
-                        "top": {}
-                    }
-                },
-                "values": {
-                    "select": [
-                        {
-                            "bind": {
-                                "to": "url_image"
-                            }
-                        },
-                        {
-                            "bind": {
-                                "to": "sales_p"
-                            }
-                        },
-                        {
-                            "bind": {
-                                "to": "sales_m"
-                            }
-                        },
-                        {
-                            "bind": {
-                                "to": "inventory_p"
-                            }
-                        },
-                        {
-                            "bind": {
-                                "to": "inventory_m"
-                            }
-                        },
-                        {
-                            "bind": {
-                                "to": "mg"
-                            }
-                        },
-                        {
-                            "bind": {
-                                "to": "coverage"
-                            }
-                        },
-                        {
-                            "bind": {
-                                "to": "scrolling"
-                            }
-                        }
-                    ]
-                }
+      {
+        "categorical": {
+          "categories": {
+            "for": {
+              "in": "item_parent"
+            },
+            "dataReductionAlgorithm": {
+              "top": {}
             }
+          },
+          "values": {
+            "select": [
+              {
+                "bind": {
+                  "to": "url_image"
+                }
+              },
+              {
+                "bind": {
+                  "to": "sales_p"
+                }
+              },
+              {
+                "bind": {
+                  "to": "sales_m"
+                }
+              },
+              {
+                "bind": {
+                  "to": "inventory_p"
+                }
+              },
+              {
+                "bind": {
+                  "to": "inventory_m"
+                }
+              },
+              {
+                "bind": {
+                  "to": "mg"
+                }
+              },
+              {
+                "bind": {
+                  "to": "coverage"
+                }
+              },
+              {
+                "bind": {
+                  "to": "scrolling"
+                }
+              }
+            ]
+          }
         }
+      }
     ],
     "privileges": [
-        {
-            "name": "WebAccess",
-            "essential": true,
-            "parameters": [ "https://www.cuidadoconelperro.com.mx/" ]
-        },
-        {
-            "name": "ExportContent",
-            "essential": false
-        }
+      {
+        "name": "WebAccess",
+        "essential": true,
+        "parameters": ["https://www.cuidadoconelperro.com.mx/"]
+      },
+      {
+        "name": "ExportContent",
+        "essential": false
+      }
     ]
-}
+  }
+  
