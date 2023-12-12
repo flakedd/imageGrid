@@ -74,9 +74,16 @@
         "properties": {
           "filter": {
             "type": {
-              "filter": true
+                "filter": true
             }
-          }
+        },
+        "selfFilter": {
+            "type": {
+               "filter": {
+                  "selfFilter": true
+               }
+            }
+         }
         }
       },
       "dataPoint": {
@@ -129,11 +136,12 @@
         "categorical": {
           "categories": {
             "for": {
-              "in": "item_parent"
-            },
-            "dataReductionAlgorithm": {
-              "top": {}
-            }
+              "in": "item_parent"},
+              "dataReductionAlgorithm": {
+                  "window": {
+                      "count": 50
+                  }
+              }  
           },
           "values": {
             "select": [
