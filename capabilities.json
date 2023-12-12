@@ -67,6 +67,7 @@
         "kind": "Measure"
       }
     ],
+    
     "objects": {
       "general": {
         "displayName": "General",
@@ -194,7 +195,7 @@
       {
         "name": "WebAccess",
         "essential": true,
-        "parameters": ["https://www.cuidadoconelperro.com.mx/"]
+        "parameters": ["*"]
       },
       {
         "name": "ExportContent",
