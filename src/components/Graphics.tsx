@@ -27,22 +27,22 @@ const Graphics: React.FC<GraphicsProps> = ({ marginValue, coverageValue,scrollin
             )}
         </div>
         <div className="graph">
-            {coverageValue !== undefined ? (
+            {scrolling !== undefined ? (
                <HalfCircle
-               percentage={(+coverageValue * 100).toFixed(0)}
-               color="44BB15"
-               title="CB"
+               percentage={(+scrolling * 100).toFixed(0)}
+               color={colorScroling}
+               title="DE"
            />
             ) : (
                 <p>N/A</p>
             )}
         </div>
         <div className="graph">
-            {scrolling !== undefined ? (
+            {coverageValue !== undefined ? (
                <HalfCircle
-               percentage={(+scrolling * 100).toFixed(0)}
-               color={colorScroling}
-               title="DE"
+               percentage={(+coverageValue * 100).toFixed(0)}
+               color="44BB15"
+               title="CB"
            />
             ) : (
                 <p>N/A</p>

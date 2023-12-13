@@ -6,6 +6,7 @@ import InfoSegment from "./components/InfoSegment";
 import Graphics from "./components/Graphics";
 import ImageStyle from "./components/img";
 
+
 interface Props {
     dataView: DataView;
 }
@@ -26,6 +27,7 @@ class boardSales extends React.Component<Props, State> {
 
     renderMatrix() {
         const { dataView } = this.props;
+        
         const categorical: DataViewCategorical | undefined = dataView && dataView.categorical;
 
         if (!categorical || !categorical.categories || !categorical.values) {
@@ -33,7 +35,6 @@ class boardSales extends React.Component<Props, State> {
         }
 
         const { categories, values } = categorical;
-        const numRows = categories[0].values.length;
 
         return (
             <div className="grid-container">
@@ -44,9 +45,9 @@ class boardSales extends React.Component<Props, State> {
                     const estilo = String(categoryValue);
                     const image = String(values[0].values[index]);
                     const salesP = Number(values[1]?.values[index]);
-                    const salesM = Number(values[2]?.values[index]).toFixed(0);
+                    const salesM = Number(values[2]?.values[index]);
                     const invP = Number(values[3]?.values[index]);
-                    const invM = Number(values[4]?.values[index]).toFixed(0);
+                    const invM = Number(values[4]?.values[index]);
                     const marginValue = Number(values[5]?.values[index]);
                     const coverageValue = Number(values[6]?.values[index]);
                     const scrolling = Number(values[7]?.values[index]);
