@@ -9,23 +9,28 @@ import "./../style/visual.less";
 
 export class Visual implements IVisual {
     private target: HTMLElement;
-    private reactRoot: React.ReactElement;  
+    private reactRoot: React.ReactElement;
+    private dataView: powerbi.DataView | null = null;  
 
     constructor(options: VisualConstructorOptions) {
-        this.reactRoot = React.createElement(boardSales, { dataView: null }); 
+        this.reactRoot = React.createElement(boardSales, { dataView: this.dataView}); 
         this.target = options.element;
 
         ReactDOM.render(this.reactRoot, this.target);
     }
 
     public update(options: VisualUpdateOptions) {
-        const dataView: powerbi.DataView = options.dataViews[0];
+        const newDataView: powerbi.DataView | undefined = options.dataViews && options.dataViews[0];
 
-        if (!dataView) {
+        if (!newDataView) {
             return;
         }
 
-        this.reactRoot = React.createElement(boardSales, { dataView });
-        ReactDOM.render(this.reactRoot, this.target);
+        if (this.dataView !== newDataView) {
+            this.dataView = newDataView;
+            this.reactRoot = React.createElement(boardSales, { dataView: this.dataView });
+            ReactDOM.render(this.reactRoot, this.target);
+        }
+    
     }
 }

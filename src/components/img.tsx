@@ -7,15 +7,7 @@ interface imgProps {
 }
 
 const ImageStyle: React.FC<imgProps> = ({ image }) => {
-    const [convertedImage, setConvertedImage] = React.useState<string | null>(null);
-   
-    React.useEffect(() => {
-        const fetchAndConvertImage = async () => {
-                    const result = await convertImageABase64(image);
-                    setConvertedImage(result);
-        };
-        fetchAndConvertImage();
-    }, [image]);
+    
 
     return (
         <div className="contentImage">
@@ -25,3 +17,4 @@ const ImageStyle: React.FC<imgProps> = ({ image }) => {
 };
 
 export default ImageStyle;
+
