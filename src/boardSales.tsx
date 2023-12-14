@@ -5,7 +5,7 @@ import BoardCard from "./components/BoardCard";
 import InfoSegment from "./components/InfoSegment";
 import Graphics from "./components/Graphics";
 import ImageStyle from "./components/img";
-
+import { IFilter } from "powerbi-models";
 
 interface Props {
     dataView: DataView;
@@ -14,6 +14,7 @@ interface Props {
 interface State {
     loading: boolean;
     error: Error | null;
+    filters: IFilter[] | undefined;
 }
 
 class boardSales extends React.Component<Props, State> {
@@ -22,14 +23,15 @@ class boardSales extends React.Component<Props, State> {
         this.state = {
             loading: false,
             error: null,
+            filters: undefined,
         };
     }
+    
 
     renderMatrix() {
         const { dataView } = this.props;
-        
         const categorical: DataViewCategorical | undefined = dataView && dataView.categorical;
-
+        
         if (!categorical || !categorical.categories || !categorical.values) {
             return null;
         }
